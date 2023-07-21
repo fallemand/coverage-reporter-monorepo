@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PR Comment util > should generate results with base branch coverage 1`] = `
+"### path/package  🟢
+
+| Lines | Statements     | Branches | Functions    |
+| ----- | -------------- | -------- | ------------ |
+|  10% **(+5%)** |  10% **(+5%)** |  10% **(+5%)** |  10% **(+5%)** |
+
+<details>
+<summary>Details</summary>
+
+| File    | Lines  | Statements  | Branches   | Functions  |
+| ------- | ------ | ----------- | ---------- | ----------- |
+|  file.ts | 10% **(+5%)** | 10% **(+5%)** | 10% **(+5%)** | 10% **(+5%)** |
+
+</details>
+
+"
+`;
+
+exports[`PR Comment util > should generate results without base branch coverage 1`] = `
+"### path/package 🟡
+We couldn't find the coverage results for \`main\`, so we can't compare.
+Printing the results of current changes.
+
+| Lines | Statements     | Branches | Functions    |
+| ----- | -------------- | -------- | ------------ |
+|  10%  |  10%  |  10%  |  10%  |
+
+"
+`;
+
+exports[`PR Comment util > should generate results without coverage difference 1`] = `
+"### path/package 
+We couldn't find the coverage results for \`main\`, so we can't compare.
+Printing the results of current changes.
+
+No changes :)
+
+"
+`;

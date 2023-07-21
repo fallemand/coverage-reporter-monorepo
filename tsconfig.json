@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "types": ["node", "vitest/globals"],
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules"],
+  "include": ["*.ts", "**/*.ts"]
+}

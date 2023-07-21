@@ -1,12 +1,15 @@
 {
   "name": "coverage-reporter-monorepo",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Coverage reporter action for monorepos",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "vitest",
+    "test": "vitest --coverage",
     "lint": "prettier . --write",
-    "prepare": "husky install"
+    "test:coverage": "ts-node index.ts -cp ./coverage/coverage-summary.json -mp packages/coverage-guard",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky install",
+    "update:dependencies": "npx npm-check-updates -u --target minor --deep --interactive"
   },
   "repository": {
     "type": "git",
@@ -30,9 +33,16 @@
   },
   "homepage": "https://github.com/fallemand/coverage-reporter-monorepo#readme",
   "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@vitest/coverage-v8": "^0.33.0",
+    "commander": "^10.0.1",
+    "coverage-diff": "^3.2.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
+    "octokit": "^2.1.0",
     "prettier": "3.0.0",
+    "ts-node": "10.9.1",
+    "typescript": "^5.1.6",
     "vitest": "^0.33.0"
   }
 }
