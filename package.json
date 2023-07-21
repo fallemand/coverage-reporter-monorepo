@@ -1,0 +1,38 @@
+{
+  "name": "coverage-reporter-monorepo",
+  "version": "1.0.0",
+  "description": "Coverage reporter action for monorepos",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "lint": "prettier . --write",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fallemand/coverage-reporter-monorepo.git"
+  },
+  "keywords": [
+    "Coverage",
+    "test",
+    "jest",
+    "vitest",
+    "unit",
+    "action"
+  ],
+  "author": "Facundo Allemand <fallemand@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fallemand/coverage-reporter-monorepo/issues"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "homepage": "https://github.com/fallemand/coverage-reporter-monorepo#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "3.0.0",
+    "vitest": "^0.33.0"
+  }
+}
